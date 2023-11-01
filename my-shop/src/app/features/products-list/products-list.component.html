@@ -1,0 +1,22 @@
+
+<table class="table mt-8">
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>id</th>
+      <th>title</th>
+      <th>price</th>
+      <th>category</th>
+    </tr>
+  </thead>
+
+  <tbody *ngIf="getProducts$ | async as product">
+    <tr *ngFor="let products of product">
+      <img class="w-2 p-2" src="{{products.image}}" alt="">
+      <td>{{ products.id }}</td>
+      <td>{{ products.title }}</td>
+      <td>R${{ products.price }}</td>
+      <td>{{ products.category }}</td>
+    </tr>
+  </tbody>
+</table>
