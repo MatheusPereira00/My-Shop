@@ -8,9 +8,12 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [CommonModule, InputTextModule],
   template: `<div class="p-input-icon-left">
     <input
+      formControlName="search"
+      placeholder="search"
       pInputText
       type="text"
-      style="width: 25rem; border-radius: 1rem; border-color: var(--grey-light-color-5)" />
+      style="width: 25rem; border-radius: 1rem; border-color: var(--grey-light-color-5)"
+    />
     <i class="pi pi-search"></i>
   </div> `,
 })
